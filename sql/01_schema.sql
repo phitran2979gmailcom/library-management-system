@@ -39,6 +39,6 @@ CREATE INDEX idx_books_ISBN ON books(ISBN) ;
 	
 CREATE INDEX idx_members_email ON members(email) ;
 	
-CREATE INDEX idx_loans_book_ID ON loans(book_ID ;
+CREATE INDEX idx_loans_book_ID ON loans(book_ID) ;
 
 CREATE INDEX idx_loans_member_ID ON loans(member_ID) ;
