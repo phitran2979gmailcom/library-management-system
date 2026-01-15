@@ -39,7 +39,9 @@ CREATE TABLE loans (
     loan_date DATE DEFAULT CURRENT_DATE,
     due_date DATE NOT NULL,
     return_date DATE,
-    CHECK (due_date >= loan_date) );
+    CHECK (due_date >= loan_date)
+	CHECK (return_date IS NULL OR return_date >= loan_date) );
+
 
 
 CREATE INDEX idx_books_ISBN ON books(ISBN) ;
