@@ -41,7 +41,7 @@ psql -U <user> -d <database> -f sql/01_schema.sql
 psql -U <user> -d <database> -f sql/02_triggers.sql
 psql -U <user> -d <database> -f sql/03_views.sql
 psql -U <user> -d <database> -f sql/04_sample_data.sql
-
+```
 
 Example Queries
 SELECT * FROM active_loans;
