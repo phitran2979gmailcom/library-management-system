@@ -45,3 +45,7 @@ CREATE INDEX idx_members_email ON members(email) ;
 CREATE INDEX idx_loans_book_ID ON loans(book_ID) ;
 
 CREATE INDEX idx_loans_member_ID ON loans(member_ID) ;
+
+CREATE UNIQUE INDEX uniq_active_loan ON loans(book_ID, member_ID)
+WHERE return_date IS NULL;
+
