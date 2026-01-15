@@ -31,3 +31,10 @@ GROUP BY b.book_ID, b.title
 ORDER BY borrow_count DESC
 LIMIT 10;
 
+CREATE VIEW member_loan_history AS
+SELECT m.full_name AS member, b.title AS book, l.loan_date, l.return_date
+FROM loans l
+JOIN members m ON l.member_ID = m.member_ID
+JOIN books b ON l.book_ID = b.book_ID;
+
+
