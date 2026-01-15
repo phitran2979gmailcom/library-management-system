@@ -43,6 +43,13 @@ CREATE TABLE loans (
 	CHECK (return_date IS NULL OR return_date >= loan_date) );
 
 
+CREATE TABLE loan_logs (
+    log_id SERIAL PRIMARY KEY,
+    loan_id INT REFERENCES loans(loan_ID) ON DELETE CASCADE,
+    action VARCHAR(50) NOT NULL,
+    log_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+
+
 
 CREATE INDEX idx_books_ISBN ON books(ISBN) ;
 	
