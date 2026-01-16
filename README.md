@@ -88,19 +88,27 @@ Optional stored procedures encapsulate business logic
 
 ## Example Queries;
 -- active loans
-- ```SELECT * FROM active_loans;```
+```
+SELECT * FROM active_loans;
+```
 
 -- overdue loans
-- ```SELECT * FROM overdue_loans;```
+```
+SELECT * FROM overdue_loans;
+```
 
 -- available books
-- ```SELECT title, available_copies 
+```
+SELECT title, available_copies 
 FROM books 
-WHERE available_copies > 0; ```
+WHERE available_copies > 0;
+```
 
 -- member loan history
-- ```SELECT b.title, l.loan_date, l.return_date
+```
+SELECT b.title, l.loan_date, l.return_date
 FROM loans l
 JOIN books b ON l.book_id = b.book_ID
-WHERE l.member_ID = 1;```
+WHERE l.member_ID = 1;
+```
 
